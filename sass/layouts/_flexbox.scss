@@ -1,0 +1,8 @@
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.content-box {
+  flex-basis: calc((100% - 30px) / var(--block-quntity));
+}

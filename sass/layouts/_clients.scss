@@ -1,0 +1,28 @@
+.clients__item {
+  --grid-item: 2;
+  @media screen and (min-width: 768px) {
+    --grid-item: 3;
+  }
+  @media screen and (min-width: 1200px) {
+    --grid-item: 6;
+  }
+}
+.clients__link {
+  @include centeredFlex;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border var(--animation);
+}
+.clients__icon {
+  fill: #afb1b8;
+  transition: fill var(--animation);
+}
+.clients__link:hover,
+.clients__link:focus {
+  border: 1px solid var(--accent-color);
+}
+.clients__link:hover .clients__icon,
+.clients__link:focus .clients__icon {
+  fill: var(--accent-color);
+}

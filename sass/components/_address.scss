@@ -1,0 +1,13 @@
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+.address__link {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}

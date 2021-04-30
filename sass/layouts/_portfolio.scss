@@ -1,0 +1,107 @@
+.portfolio-list {
+  align-items: stretch;
+}
+.portfolio__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.portfolio__navigation {
+  display: flex;
+  margin-bottom: 50px;
+}
+.portfolio__link {
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow var(--animation);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.portfolio__link:hover,
+.portfolio__link:focus {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.navigation-list__item:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio__button {
+  display: block;
+  padding: 6px 22px;
+  font-weight: 500;
+  line-height: 1.63;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  transition: color var(--animation), background-color var(--animation),
+    box-shadow var(--animation);
+}
+
+.portfolio__button:hover,
+.portfolio__button:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-list__card {
+  padding: 20px 24px;
+  background: var(--white-color);
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.portfolio-list__wrap {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio__description {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  transition: transform var(--animation);
+  overflow: auto;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+}
+.portfolio__link:hover .portfolio__description,
+.portfolio__link:focus .portfolio__description {
+  transform: translateY(-100%);
+}
+.portfolio-list__title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-text-color);
+}
+.portfolio__item {
+  line-height: 1.87;
+  color: #757575;
+  background-color: lightgreen;
+
+  --grid-item: 1;
+
+  @media screen and (min-width: 768px) {
+    --grid-item: 2;
+  }
+  @media screen and (min-width: 1200px) {
+    --grid-item: 3;
+  }
+}
+.portfolio-list__name {
+  margin-bottom: 0;
+}
+.portfolio__name {
+  margin-bottom: 0;
+}
