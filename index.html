@@ -48,7 +48,7 @@
           </a>
         </li>
       </ul>
-      <button class="mobile-menu-btn" data-menu-button>
+      <button type="button" aria-expanded="false" aria-controls="menu-container" class="mobile-menu-btn" data-menu-button>
         <svg class="mobile-menu-icon">
           <use class="icon-menu" href="./images/icons/sprite1.svg#icon-menu"></use>
           <use class="icon-close" href="./images/icons/sprite1.svg#icon-close"></use>
@@ -58,7 +58,7 @@
   </header> 
   <!-- Мобильное меню -->
   
-    <div class="mobile-menu" data-menu>
+    <div class="mobile-menu" id="menu-container" data-menu>
       <nav class="mobile-menu__navigation">
         <ul class="list menu">
           <li class="menu__item">
