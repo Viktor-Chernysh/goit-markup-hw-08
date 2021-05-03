@@ -23,6 +23,7 @@
   transition: fill var(--animation);
 }
 .mobile-menu {
+  position: fixed;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -38,6 +39,9 @@
 
   @media screen and (min-width: 767.98px) {
     display: none;
+  }
+  .menu__link {
+    padding: 0;
   }
 
   &__menu-margin {
@@ -60,11 +64,14 @@
 
     margin-bottom: 64px;
   }
-
-  .link {
-    padding: 16px 0;
+  .contacts__item + .contacts__item {
+    margin-top: 32px;
+  }
+  .menu__item + .menu__item {
+    margin-top: 32px;
   }
 }
+
 .icon-close {
   display: none;
 }
@@ -79,6 +86,7 @@
 }
 .mobile-menu__phone {
   display: inline-block;
+
   font-weight: 500;
   font-size: 34px;
   line-height: 1.18;

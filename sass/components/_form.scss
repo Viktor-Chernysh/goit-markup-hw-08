@@ -84,6 +84,9 @@
   border: 2px solid black;
   border-radius: 2px;
   transition: background-color var(--animation), border var(--animation);
+  @media screen and (max-width: 767.98px) {
+    left: 0;
+  }
 }
 .form__agreement-text {
   padding-left: 25px;
@@ -91,6 +94,11 @@
   line-height: 1.71;
 
   color: var(--secondary-text-color);
+  @media screen and (max-width: 767.98px) {
+    font-size: 12px;
+    line-height: 1.17;
+    padding-left: 17px;
+  }
 }
 .form__checkbox:checked + .form__icon-check {
   background-color: var(--accent-color);
@@ -101,6 +109,10 @@
   line-height: 1, 71;
 
   color: var(--accent-color);
+  @media screen and (max-width: 767.98px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 .form__button {
   display: block;

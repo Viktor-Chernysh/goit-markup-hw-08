@@ -6,6 +6,9 @@
   letter-spacing: 0.02em;
 
   color: var(--accent-color);
+  .social-links__link {
+    padding: 0;
+  }
 }
 .social-links__item:not(:last-child)::after {
   content: "";
