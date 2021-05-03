@@ -26,7 +26,9 @@
   padding-bottom: 12px;
 }
 .contacts__item:not(:last-child) {
-  margin-right: 30px;
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+  }
 }
 
 .contacts__icon {
