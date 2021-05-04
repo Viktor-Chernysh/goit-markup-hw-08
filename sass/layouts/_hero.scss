@@ -4,6 +4,11 @@
     padding-top: 118px;
     padding-bottom: 118px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    max-width: 768px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -26,8 +31,8 @@
 
   max-width: 690px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
@@ -37,5 +42,15 @@
     line-height: 1.62;
     padding-left: 45px;
     padding-right: 45px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
   }
 }

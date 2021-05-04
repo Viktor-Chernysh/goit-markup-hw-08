@@ -10,13 +10,19 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
   }
   &__link--active {
     position: relative;
     color: var(--accent-color);
   }
-  @media screen and (min-width: 768px) {
-    &__link--active::after {
+
+  &__link--active::after {
+    @media screen and (min-width: 768px) {
       position: absolute;
       left: 0;
       bottom: -13px;
@@ -26,6 +32,9 @@
       height: 4px;
       background-color: var(--accent-color);
       border-radius: 2px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      bottom: -28px;
     }
   }
 

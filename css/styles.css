@@ -322,6 +322,10 @@ body {
   color: var(--main-text-color);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   width: 100%;
@@ -417,6 +421,13 @@ img {
   padding-bottom: 20px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .menu__link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
 .menu__link--active {
   position: relative;
   color: var(--accent-color);
@@ -433,6 +444,12 @@ img {
     height: 4px;
     background-color: var(--accent-color);
     border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .menu__link--active::after {
+    bottom: -28px;
   }
 }
 
@@ -505,12 +522,12 @@ img {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
+  line-height: 1.19;
   color: #000000;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199.98px) {
   .logo {
-    font-weight: bold;
     font-size: 24px;
     line-height: 1.17;
   }
@@ -524,7 +541,7 @@ img {
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 10;
+  z-index: 2;
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -554,13 +571,13 @@ img {
   position: fixed;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  transform: translateY(-100%);
+  transform: translateX(100%);
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   padding: 48px 40px;
+  z-index: 1;
   background-color: #fff;
   transition: transform var(--animation);
 }
@@ -683,7 +700,7 @@ img {
 
 @media screen and (max-width: 767.98px) {
   .backdrop {
-    overflow-y: scroll;
+    z-index: 2;
   }
 }
 
@@ -707,9 +724,13 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199.98px) {
   .modal {
-    width: 450px;
+    max-width: 450px;
+    max-height: 600px;
+    height: 100%;
+    z-index: 2;
+    overflow-y: scroll;
   }
 }
 
@@ -746,11 +767,11 @@ img {
   display: block;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   margin-bottom: 12px;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199.98px) {
   .modal__title {
     text-align: center;
   }
@@ -777,7 +798,7 @@ img {
 
 .form__input {
   width: 100%;
-  padding: 11px 42px;
+  padding: 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border var(--animation);
@@ -853,7 +874,7 @@ img {
   transition: background-color var(--animation), border var(--animation);
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199.98px) {
   .form__icon-check {
     left: 0;
   }
@@ -866,7 +887,7 @@ img {
   color: var(--secondary-text-color);
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199px) {
   .form__agreement-text {
     font-size: 12px;
     line-height: 1.17;
@@ -885,7 +906,7 @@ img {
   color: var(--accent-color);
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1199.98px) {
   .form__agreement-link {
     font-size: 12px;
     line-height: 1.17;
@@ -935,6 +956,13 @@ img {
   text-align: center;
 }
 
+@media screen and (max-width: 767.98px) {
+  .section__title {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+}
+
 .header {
   font-weight: 500;
   font-size: 14px;
@@ -958,11 +986,21 @@ img {
   .header__contacts {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 1.17;
+    margin-right: 0;
   }
 }
 
 .header__logo {
   margin-right: 93px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__logo {
+    margin-right: 88px;
+  }
 }
 
 .container__header {
@@ -973,12 +1011,19 @@ img {
 
 @media screen and (max-width: 767.98px) {
   .container__header {
+    position: relative;
     padding-top: 16px;
     padding-bottom: 16px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .container__header {
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .contacts__item:not(:last-child) {
     margin-right: 30px;
   }
@@ -1010,13 +1055,21 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .hero__container {
+    max-width: 768px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+
 .hero__title {
   margin-left: auto;
   margin-right: auto;
   max-width: 690px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
@@ -1031,11 +1084,33 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .hero__title {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
+}
+
 .advantages__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767.98px) {
+  .advantages__title {
+    text-align: center;
+  }
 }
 
 .advantages__item {
@@ -1090,7 +1165,7 @@ img {
   padding-top: 0;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.98px) {
   .work {
     display: none;
   }
@@ -1216,6 +1291,13 @@ img {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 767.98px) {
+  .portfolio__navigation {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+
 .portfolio__link {
   color: inherit;
   text-decoration: none;
@@ -1233,6 +1315,12 @@ img {
 
 .navigation-list__item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .navigation-list__item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__button {
@@ -1411,6 +1499,10 @@ img {
   --block-quntity: 2;
 }
 
+.footer__mobile {
+  margin-bottom: 60px;
+}
+
 @media screen and (max-width: 767.98px) {
   .flexbox {
     display: flex;
@@ -1428,6 +1520,12 @@ img {
 
 .content-box {
   flex-basis: calc((100% - 30px) / var(--block-quntity));
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .content-box {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
