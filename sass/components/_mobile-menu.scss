@@ -59,10 +59,12 @@
   }
   &.is-open {
     transform: translateY(0);
+    .mobile-menu-btn {
+      position: fixed;
+    }
   }
   .contacts {
     display: block;
-
     margin-bottom: 64px;
   }
   .contacts__item + .contacts__item {
