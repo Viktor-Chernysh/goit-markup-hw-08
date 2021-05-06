@@ -1034,61 +1034,83 @@ img {
   fill: currentColor;
 }
 
-.hero__container {
-  max-width: 1600px;
+.hero {
+  height: 400px;
+  max-width: 768px;
+  padding-top: 118px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/img.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile/img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-@media screen and (max-width: 767.98px) {
-  .hero__container {
-    max-width: 480px;
-    padding-top: 118px;
-    padding-bottom: 118px;
+@media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile/img@2x.jpg);
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .hero {
+    max-width: 1200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tablet/img.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199.98px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199.98px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tablet/img@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    height: 600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desktop/img.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desktop/img@2x.jpg);
+  }
+}
+
+.hero__container {
+  max-width: 480px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .hero__container {
     max-width: 768px;
-    padding-top: 118px;
-    padding-bottom: 118px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    max-width: 1200px;
   }
 }
 
 .hero__title {
   margin-left: auto;
   margin-right: auto;
-  max-width: 690px;
-  font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
+  max-width: 360px;
+  font-weight: 900;
+  font-size: 26px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
-}
-
-@media screen and (max-width: 767.98px) {
-  .hero__title {
-    font-size: 26px;
-    line-height: 1.62;
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .hero__title {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1097,6 +1119,7 @@ img {
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
+    max-width: 690px;
   }
 }
 
@@ -1344,7 +1367,6 @@ img {
 .portfolio-list__card {
   padding: 20px 24px;
   background: var(--white-color);
-  border: 1px solid #eeeeee;
   border-top: none;
 }
 
@@ -1386,7 +1408,7 @@ img {
 .portfolio__item {
   line-height: 1.87;
   color: #757575;
-  background-color: lightgreen;
+  outline: 1px solid #eeeeee;
   --grid-item: 1;
 }
 
@@ -1499,8 +1521,10 @@ img {
   --block-quntity: 2;
 }
 
-.footer__mobile {
-  margin-bottom: 60px;
+@media screen and (max-width: 767.98px) {
+  .footer__mobile {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
