@@ -26,7 +26,7 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-
+  overflow-y: scroll;
   transform: translateX(100%);
   top: 0;
   left: 0;
