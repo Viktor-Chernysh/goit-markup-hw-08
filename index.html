@@ -85,16 +85,16 @@
       </ul>
       <ul class="list mobile-menu__social-links social-links">
         <li class="social-links__item">
-          <a href="" class="link social-links__link">Instagram</a>
+          <a href="" class="link social-links__link" target="_blank" rel="noopener">Instagram</a>
         </li>
         <li class="social-links__item">
-          <a href="" class="link social-links__link">Twitter</a>
+          <a href="" class="link social-links__link" target="_blank" rel="noopener">Twitter</a>
         </li>
         <li class="social-links__item">
-          <a href="" class="link social-links__link">Facebook</a>
+          <a href="" class="link social-links__link" target="_blank" rel="noopener">Facebook</a>
         </li>
         <li class="social-links__item">
-          <a href="" class="link social-links__link">LinkedIn</a>
+          <a href="" class="link social-links__link" target="_blank" rel="noopener">LinkedIn</a>
         </li>
       </ul>
     </div>
@@ -140,21 +140,21 @@
           <li class="item grid__item work__item">
             <picture>
               <source srcset="./images/work/img1.jpg 1x, ./images/work/img1@2x.jpg 2x">
-              <img src="./images/work/img1.jpg" width="370" height="294" alt="пример работы- десктопные приложения">
+              <img src="./images/work/img1.jpg" width="370" alt="пример работы- десктопные приложения">
             </picture>
             <p class="work__content">Десктопные приложения</p>
           </li>
           <li class="item grid__item work__item">
             <picture>
               <source srcset="./images/work/img2.jpg 1x, ./images/work/img2@2x.jpg 2x">
-              <img src="./images/work/img2.jpg" width="370" height="294" alt="пример работы- мобильные приложения">
+              <img src="./images/work/img2.jpg" width="370" alt="пример работы- мобильные приложения">
             </picture>
             <p class="work__content">Мобильные приложения</p>
           </li>
           <li class="item grid__item work__item">
             <picture>
               <source srcset="./images/work/img3.jpg 1x, ./images/work/img3@2x.jpg 2x">
-              <img src="./images/work/img3.jpg" width="370" height="294" alt="пример работы- дизайн">
+              <img src="./images/work/img3.jpg" width="370" alt="пример работы- дизайн">
             </picture>
             <p class="work__content">Дизайнерские решения</p>
           </li>
@@ -587,22 +587,7 @@
     </div>
   </div>
   <script src="./js/mobile-menu.js"></script>
-  <script src="./js/modal.js">
-  (() => {
-      const refs = {
-        openModalBtn: document.querySelector('[data-modal-open]'),
-        closeModalBtn: document.querySelector('[data-modal-close]'),
-        modal: document.querySelector('[data-modal]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      function toggleModal() {
-        refs.modal.classList.toggle('is-hidden');
-      }
-    })();
-  </script>
+  <script src="./js/modal.js"></script>
  
 </body>
 </html>

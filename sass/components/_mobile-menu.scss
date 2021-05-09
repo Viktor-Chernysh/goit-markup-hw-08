@@ -16,6 +16,11 @@
     fill: var(--accent-color);
   }
 }
+.mobile-menu-btn.is-open {
+  @media screen and (max-width: 767.98px) {
+    position: fixed;
+  }
+}
 .mobile-menu-icon {
   width: 40px;
   height: 40px;

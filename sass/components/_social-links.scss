@@ -1,5 +1,6 @@
 .social-links {
   display: flex;
+  flex-wrap: wrap;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -24,4 +25,10 @@
 }
 .social-links__item + .social-links__item {
   margin-left: 10px;
+}
+@media screen and (max-width: 361px) {
+  .social-links__item:nth-child(-n + 2) {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
 }
