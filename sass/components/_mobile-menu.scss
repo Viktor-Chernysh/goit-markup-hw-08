@@ -15,12 +15,11 @@
   &:hover .mobile-menu-icon {
     fill: var(--accent-color);
   }
-}
-.mobile-menu-btn.is-open {
-  @media screen and (max-width: 767.98px) {
+  &.is-open {
     position: fixed;
   }
 }
+
 .mobile-menu-icon {
   width: 40px;
   height: 40px;
@@ -86,9 +85,6 @@
 
 .is-open {
   .icon-close {
-    // position: absolute;
-    // top: 10px;
-    // right: 15px;
     display: block;
   }
   .icon-menu {
